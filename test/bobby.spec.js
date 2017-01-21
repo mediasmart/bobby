@@ -1,43 +1,27 @@
 import { assert, expect } from 'chai';
-import Bobby from '../src';
+import bobby from '../src';
 
-describe('Bobby', function() {
+describe('bobby', function() {
 
   // let bobby;
-  const value = {
+  const sample = {
     name: 'javi',
-    twitter: 'soyjavi',
-  };
-  const schema = {
-    name: {
-      exists: true,
-      type: String,
-    },
-    year: {
-      type: Number,
+    year: 1980,
+    languages: ['basque', 'spanish', 'english', 'thai'],
+    networks: {
+      twitter: 'soyjavi',
     },
   };
 
-  // beforeEach(() => bobby = new Bobby());
+  const schema = {
+    name: { contains: 'av', exists: true, type: String, length: 4, value: 'com' },
+    languages: { type: Array, length: 4, contains: ['spanish', 'english'] },
+    year: { type: Number, exists: true, value: 1981 },
+    'networks.twitter': { exists: true },
+  };
 
   it('Up & Running', function() {
-
-
-    expect(typeof Bobby).to.equal('function');
-
-    console.log('👮', Bobby(value, schema));
-
-
-    // const methods = Object.keys(bobby);
-
-
-    //
-    // expect(methods.length).to.equal(2);
-    //
-    // expect(methods[0]).to.equal('intent');
-    // expect(typeof bobby.intent).to.equal('function');
-    //
-    // expect(methods[1]).to.equal('listen');
-    // expect(typeof bobby.listen).to.equal('function');
+    expect(typeof bobby).to.equal('function');
+    console.log('👮', bobby(sample, schema));
   });
 });
