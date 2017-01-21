@@ -17,7 +17,7 @@ describe('bobby', function() {
     name: { contains: 'av', exists: true, type: String, length: 4, value: 'com' },
     languages: { type: Array, length: 4, contains: ['spanish', 'english'] },
     year: { type: Number, exists: true, value: 1981 },
-    'networks.twitter': { exists: true },
+    'networks.twitter': { exists: true, contains: 'javi' },
   };
 
   it('Up & Running', function() {
