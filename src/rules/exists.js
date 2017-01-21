@@ -1,6 +1,6 @@
-export default (sample, rule) => {
-  console.log('      📏 exists', sample, rule);
+export default (sample, expected) => {
+  const valid = (sample !== undefined) === expected;
+  console.log('      📏 exists', sample, expected, valid);
 
-  // return state.value.hasOwnProperty('manolo');
-  return true;
+  return valid;
 };

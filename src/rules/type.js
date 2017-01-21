@@ -1,5 +1,5 @@
-export default (sample, rule) => {
-  console.log('      📏 type', sample, rule);
-
-  return true;
+export default (sample, expected) => {
+  const test = sample.constructor === expected;
+  console.log('      📏 type', sample, expected, test);
+  return test;
 };
