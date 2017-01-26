@@ -1,11 +1,11 @@
 import { assert, expect } from 'chai';
-import contains from '../../src/rules/contains';
+import { contains } from '../../src/rules';
 
-describe('bobby', function() {
+describe('contains()', function() {
 
   const sampleString = 'Hello World';
   const sampleArray = ['hello', 'world'];
-
+  const sampleNumber = 1980;
 
   it('Up & Running', function() {
     expect(typeof contains).to.equal('function');
@@ -33,5 +33,17 @@ describe('bobby', function() {
 
   it('refuse a invalid {array} type on a {array} sample', function() {
     expect(contains(sampleArray, ['hello', 'mars'])).to.equal(false);
+  });
+
+  it('accept a valid {number} type on a {number} sample', function() {
+    expect(contains(sampleNumber, 8)).to.equal(true);
+  });
+
+  it('refuse a valid {number} type on a {number} sample', function() {
+    expect(contains(sampleNumber, 4)).to.equal(false);
+  });
+
+  it('refuse a invalid {number} type on a {string} sample', function() {
+    expect(contains(sampleString, 1)).to.equal(false);
   });
 });

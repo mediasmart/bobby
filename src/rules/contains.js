@@ -8,12 +8,16 @@ export default (sample, expected) => {
         const founds = expected.filter(exp => sample.find(item => item === exp));
         valid = founds.length === expected.length;
       } else {
-        valid = sample.find(item => item === expected);
+        valid = sample.find(item => item === expected) !== undefined;
       }
       break;
 
     case String:
       valid = sample.includes(expected);
+      break;
+
+    case Number:
+      valid = sample.toString().includes(expected.toString());
       break;
 
     default:

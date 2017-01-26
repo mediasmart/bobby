@@ -1,7 +1,7 @@
 import { assert, expect } from 'chai';
 import bobby from '../src';
 
-describe('bobby', function() {
+describe('bobby.js', function() {
 
   // let bobby;
   const sample = {
@@ -22,6 +22,6 @@ describe('bobby', function() {
 
   it('Up & Running', function() {
     expect(typeof bobby).to.equal('function');
-    console.log('👮', bobby(sample, schema));
+    // console.log('👮', bobby(sample, schema));
   });
 });

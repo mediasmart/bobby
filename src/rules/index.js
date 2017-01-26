@@ -1,13 +1,5 @@
-import contains from './contains';
-import exists from './exists';
-import length from './length';
-import type from './type';
-import value from './value';
-
-export default {
-  contains,
-  exists,
-  length,
-  type,
-  value,
-};
+export { default as contains } from './contains';
+export { default as exists } from './exists';
+export { default as length } from './length';
+export { default as type } from './type';
+export { default as value } from './value';
