@@ -1,7 +1,17 @@
-export { default as contains } from './contains';
-export { default as custom } from './custom';
-export { default as exists } from './exists';
-export { default as length } from './length';
-export { default as pattern } from './pattern';
-export { default as type } from './type';
-export { default as value } from './value';
+import contains from './contains';
+import custom from './custom';
+import exists from './exists';
+import length from './length';
+import pattern from './pattern';
+import type from './type';
+import value from './value';
+
+export default {
+  contains,
+  custom,
+  exists,
+  length,
+  pattern,
+  type,
+  value,
+};

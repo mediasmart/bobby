@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import { pattern } from '../../src/rules';
+import pattern from '../../src/rules/pattern';
 
 describe('pattern()', function() {
 

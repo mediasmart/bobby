@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import { exists } from '../../src/rules';
+import exists from '../../src/rules/exists';
 
 describe('exists()', function() {
 

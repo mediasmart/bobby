@@ -1,16 +1,20 @@
 import rules from './rules';
 
 export default (sample, schema) => {
-  return Object.keys(schema).map(field => {
+  const errors = [];
+
+  Object.keys(schema).forEach(field => {
     const value = field.split('.').reduce((previous, current) => {
       return previous ? previous[current] : undefined;
     }, sample);
     const schemaField = schema[field];
 
-    return Object.keys(schemaField).map(rule => {
+    Object.keys(schemaField).forEach(rule => {
       const expected = schemaField[rule];
       const pass = rules[rule] && rules[rule](value, expected);
-      if (pass !== true) return { field, rule, expected, value };
+      if (pass !== true) errors.push({ field, rule, expected, value });
     });
   });
+
+  return errors;
 };

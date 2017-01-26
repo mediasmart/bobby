@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import { length } from '../../src/rules';
+import length from '../../src/rules/length';
 
 describe('length()', function() {
 

@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import { type } from '../../src/rules';
+import type from '../../src/rules/type';
 
 describe('type()', function() {
 

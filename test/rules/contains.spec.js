@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import { contains } from '../../src/rules';
+import contains from '../../src/rules/contains';
 
 describe('contains()', function() {
 

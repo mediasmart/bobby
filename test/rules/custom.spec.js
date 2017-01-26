@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import { custom } from '../../src/rules';
+import custom from '../../src/rules/custom';
 
 describe('custom()', function() {
 
