@@ -1,7 +1,7 @@
 {
   "name": "bobby.js",
   "description": "A declarative way of validating complex javascript nested objects.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./lib/index.js",
   "homepage": "https://github.com/mediasmart/bobby#readme",
   "author": "Javi Jimenez Villar <hello@soyjavi.com> (http://soyjavi.com/)",

@@ -1,4 +1,5 @@
 export { default as contains } from './contains';
+export { default as custom } from './custom';
 export { default as exists } from './exists';
 export { default as length } from './length';
 export { default as pattern } from './pattern';
