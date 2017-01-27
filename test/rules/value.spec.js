@@ -28,13 +28,12 @@ describe('value()', function() {
     expect(value(sampleNumber, 1981)).to.equal(false);
   });
 
-  // @TODO: FIX
-  // it('accept a {array} sample', function() {
-  //   expect(value(sampleArray, ['hello', 'world'])).to.equal(true);
-  // });
+  it('accept a {array} sample', function() {
+    expect(value(sampleArray, ['hello', 'world'])).to.equal(true);
+  });
 
   it('refuses a {array} sample', function() {
-    expect(value(sampleArray, ['hello', 'world'])).to.equal(false);
+    expect(value(sampleArray, ['hello', 'World'])).to.equal(false);
     expect(value(sampleArray, ['hello'])).to.equal(false);
   });
 });
