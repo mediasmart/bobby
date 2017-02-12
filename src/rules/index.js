@@ -1,5 +1,6 @@
 import contains from './contains';
 import custom from './custom';
+import email from './email';
 import exists from './exists';
 import length from './length';
 import max_length from './max_length';
@@ -11,6 +12,7 @@ import value from './value';
 export default {
   contains,
   custom,
+  email,
   exists,
   length,
   max_length,

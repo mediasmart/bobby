@@ -1,3 +1,1 @@
-import Bobby from './bobby';
-
-export default Bobby;
+export default from './bobby';
