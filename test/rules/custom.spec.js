@@ -1,20 +1,19 @@
-import { assert, expect } from 'chai';
+import { expect } from 'chai';
 import custom from '../../src/rules/custom';
 
-describe('custom()', function() {
-
+describe('custom()', () => {
   const sampleText = 'hello';
   const callback = (sample) => sample === sampleText;
 
-  it('Up & Running', function() {
+  it('Up & Running', () => {
     expect(typeof custom).to.equal('function');
   });
 
-  it('accept a valid sample for custom callback', function() {
+  it('accept a valid sample for custom callback', () => {
     expect(custom(sampleText, callback)).to.equal(true);
   });
 
-  it('refuse a valid sample for custom callback', function() {
+  it('refuse a valid sample for custom callback', () => {
     expect(custom('hola', callback)).to.equal(false);
   });
 });
