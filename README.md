@@ -13,7 +13,7 @@ This is an Open Source project, so any help will be welcomed.
 
 ## Installation
 #### Using npm
-`$ npm install booby.js --save`
+`$ npm install bobby.js --save`
 and then, require it
 ```javascript
 import bobby from 'bobby.js';
