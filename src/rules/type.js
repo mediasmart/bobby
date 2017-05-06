@@ -1,3 +1,3 @@
-export default (sample, expected) => {
-  return sample.constructor === expected;
-};
+export default (sample, expected) => (
+  typeof sample === 'undefined' || sample.constructor === expected
+);
